@@ -8,7 +8,6 @@ body{
 }
 section{
     padding: 0 calc(9.1vw - 13.9px ) 160px;
-
 }
 
 .logo{
@@ -234,13 +233,13 @@ section{
     font-weight: 400;
     line-height: 140%; 
 }
-.infocourse {
+.infocourse{
     display: flex;
 }
 .emoji_container {
     display: flex;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1100px){
    .speaker{
     display: flex;
     flex-direction: column;
@@ -256,65 +255,146 @@ section{
     text-transform: uppercase;
 }
 /* info_speaker_start */
-.info_screen h1 {
-    font-size: 58px;
+.info_screen h1{
+    font-size: calc(1.5vw + 28.1px);
     margin-bottom: 90px;
 }
-
-.info_block {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 50px 120px;
-}
-
-.info_section {
-    max-width: 400px;
-}
-
-.info_section .title {
+.info_block .title{
     font-size:27px;
     font-weight: 600;
     line-height: 140%;
     text-transform: uppercase;
 }
-
-.info_section .value {
+.info_block .value{
     margin-top: 20px;
     font-size: 27px;
     line-height: 140%; 
 }
+.from_scratch{
+    width: 400px;
+    height: 250px;
+    grid-area: a;
+}
+.employment_asistance{
+    width: 420px;
+    height: 250px;
+    grid-area: b;
+}
+.to_the_result{
+    margin-top: 50px;
+    width: 400px;
+    height: 250px;
+    grid-area: c;
+}
+.practice{
+    margin-top: 70px;
+    width: 400px;
+    height: 250px;
+    grid-area: d;
+}
+.info_block{
+    display: grid;
+    gap: 50px 120px;
+    max-width: 400px;
+    grid-template-areas: "a b"
+                         "c d";
+}
+@media (max-width: 700px) {
+    .info_block{
+       
+        grid-template-areas:  "a"
+                              "b"
+                              "c"
+                              "d";
+    }
+}
 /* info_speaker_end */
-/* graduation diploma_start */
-.info_diplom img{
+/* graduation_diploma_start */
+.diplom_graduation{
+    display: grid;
+    gap: 20px 20px;
+    grid-template-areas: "a b"
+                         "a c";
+}
+.img_diplom{
     width: 430px;
     height: 300px;
-    flex-shrink: 0;
+    grid-area: a;
 }
 .diplom_info .title{
-    margin-left: 20px;
     font-size: 58px;
     font-weight: 500;
-    line-height: normal;
     letter-spacing: 0.58px;
     text-transform: uppercase;
-}
-.info_diplom{
-    display: flex;
+    grid-area: b;
 }
 .info_diplom .value{
     margin-top: 20px;
     max-width:514px;
-    margin-left: 20px;
     font-size: 27px;
-    font-weight: 400;
     line-height: 140%; 
+    grid-area: c;
 }
-
-/* graduation diploma_end */
-
+@media (max-width: 900px) {
+    .diplom_graduation{
+       
+        grid-template-areas:  "b"
+                              "a"
+                              "c";
+    }
+}
+/* graduation_diploma_end */
 /* info_about_us_start */
-
-
+.about_us h2{
+    font-size: calc(2.6vw + 24px);
+    font-weight: 500;
+    letter-spacing: 0.58px;
+    text-transform: uppercase;
+}
+.about_us img{
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    grid-area: a;
+}
+.aboutUs .student{
+    grid-area: b;
+}
+.aboutUs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 97px;
+    margin-top: 80px;
+    grid-template-areas:    "a b"
+                            "c d";
+}
+.aboutUs .title{
+    font-size: calc(2.6vw + 24px);
+    font-weight: 700;
+    letter-spacing: 0.58px;
+}
+.aboutUs .value{
+    font-size: calc(1vw + 13px);
+    line-height: 140%;
+}
+.desc{
+    font-size: calc(0.5vw + 20px);
+    font-weight: 600;
+    line-height: 140%;
+    text-transform: uppercase;
+    grid-area: c;
+}
+.aboutUs .infoAboutUs{
+    grid-area: d;
+}
+@media (max-width: 600px) {
+    .aboutUs{
+        grid-template-columns: 1fr;
+        grid-template-areas:  "a"
+                              "c"
+                              "b"
+                              "d";
+    }
+}
 /* info_about_us_end */
 
